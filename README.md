@@ -34,13 +34,19 @@ To run these scripts, you need:
 Example: addpath C:\femm42\mfiles
 
 ## Usage
+Run the following scripts sequentially in MATLAB,
 
-run('s1_geometry_calc.m')
-run('s2_FEMM_Geometry.m')
-run('s3_torque_vs_thetae.m')
-run('s4_master_sweep_and_postproc.m')
-run('s5_torque_analysis.m')
-run('s6_fluxlinkage_emf_analysis.m')
+**run('s1_geometry_calc.m')**
+
+**run('s2_FEMM_Geometry.m')**
+
+**run('s3_torque_vs_thetae.m')**
+
+**run('s4_master_sweep_and_postproc.m')**
+
+**run('s5_torque_analysis.m')**
+
+**run('s6_fluxlinkage_emf_analysis.m')**
 
 ## Contact
 
