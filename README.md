@@ -15,7 +15,7 @@ In this folder, the following MATLAB scripts are provided:
 
 - **s2_FEMM_drawing.m:** Uses the analytical design calculations from Script 1 to automatically build the 2D PMSM model in FEMM, including stator slots, rotor with surface-mounted magnets, materials, boundary conditions, and three-phase windings (via dq→abc currents and slot mapping), then runs the magnetostatic solution, plots the flux density and reports the computed electromagnetic torque. User interaction is limited to the parameter block at the top (FEMM path, file name, problem settings, shaft diameter, electrical angle and slot label offsets).
 
-- **s3_torque_vs_thetae.m:** Runs a current-angle sweep (rotor fixed) in FEMM using the analytical operating-point currents from Script 1 to evaluate electromagnetic torque vs. electrical injection angle. Modifies the phase currents in each step, solves the magnetostatic model, extracts torque, identifies the maximum-torque injection angle, saves the results to a .mat file, and plots the torque-angle curve. User interaction is limited to the parameter block at the top (sweep range, step size, output file settings).
+- **s3_torque_vs_theta_elec.m:** Runs a current-angle sweep (rotor fixed) in FEMM using the analytical operating-point currents from Script 1 to evaluate electromagnetic torque vs. electrical injection angle. Modifies the phase currents in each step, solves the magnetostatic model, extracts torque, identifies the maximum-torque injection angle, saves the results to a .mat file, and plots the torque-angle curve. User interaction is limited to the parameter block at the top (sweep range, step size, output file settings).
 
 - **s4_master_sweep_and_postproc.m:** Performs a rotor-position sweep in FEMM (using the optimal current angle from Script 3) to evaluate torque ripple, flux linkages, and back-EMF over one electrical period. Automatically rotates the rotor, updates phase currents (dq→abc), solves the magnetostatic model at each step, stores torque and flux data, computes back-EMF via numerical differentiation, saves all results to a .mat file, and prints sweep progress. User interaction is limited to the parameter block at the top (step size, sweep range, output file settings).
 
@@ -38,9 +38,9 @@ Run the following scripts sequentially in MATLAB,
 
 **run('Matlab Codes/s1_geometry_calc.m')**
 
-**run('Matlab Codes/s2_FEMM_Geometry.m')**
+**run('Matlab Codes/s2_FEMM_drawing.m')**
 
-**run('Matlab Codes/s3_torque_vs_thetae.m')**
+**run('Matlab Codes/s3_torque_vs_theta_elec.m')**
 
 **run('Matlab Codes/s4_master_sweep_and_postproc.m')**
 
