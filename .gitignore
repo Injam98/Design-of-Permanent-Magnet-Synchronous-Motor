@@ -1,0 +1,7 @@
+# FEMM temporary files
+*.ans
+*.bak
+*_TMP.fem
+
+# MATLAB autosave files
+*.asv
